@@ -1,0 +1,10 @@
+<div *ngIf="!showSuccess">
+    <h4>Confirm appointment with a $10.00 deposit</h4>
+</div>
+<div *ngIf="showSuccess">
+    <h2>Confirmed</h2>
+</div>
+
+        
+<ngx-paypal [config]="payPalConfig"></ngx-paypal>
+

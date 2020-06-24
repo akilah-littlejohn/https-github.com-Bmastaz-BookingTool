@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="fixed-header">
+  <h1>KoolHead</h1>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space">
+
+    <nav>
+    <!-- <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
+    <a routerLink="/heroes" routerLinkActive="active">Heroes</a> -->
+    </nav>
+
+  </span>
+
+  <span>The Booking App</span>
+  <button id="logoutbttn" mat-button (click)="out()">Logout</button>
+
+</mat-toolbar>
+
+    <div  class="container">
+      <router-outlet></router-outlet>
+    </div>
+
+ 
+  

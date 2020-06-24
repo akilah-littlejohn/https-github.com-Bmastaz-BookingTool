@@ -1,0 +1,46 @@
+.mat-toolbar.mat-primar{
+  background-color: black;
+}
+
+#logoutbttn{
+  float: right;
+}
+
+h1{margin-top: 0;}
+h2{
+  text-align: center;
+}
+.wrapper {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px double black;
+  }
+  .content{
+    color: #d6d6d6;
+    position: relative;
+    padding:30px;
+    margin:0px;
+    background: rgba(15, 15, 15, 0.5);
+  }
+  .example-form {
+    min-width: 300px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .ButtonContainer{
+    width: auto;
+    display:flex; 
+    justify-content:center;
+  }
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+  

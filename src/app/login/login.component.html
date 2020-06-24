@@ -1,0 +1,74 @@
+
+    <div class="wrapper">
+      <div class="content">
+    <div class="container">
+      <ng-container *ngIf="!register">
+        <form #f="ngForm" (ngSubmit)="emailLogin(f)" class="example-form">
+          <h2>Login</h2>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input name="email" ngModel matInput>
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input name="pword" ngModel matInput>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Password is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <div class="formButtonContainer">
+            <button class="example-full-width" mat-button>Submit</button>
+          </div>
+        </form>
+        <hr>
+        <div class="formButtonContainer">
+          <button (click)="RegisterRegister()" mat-button>Sign Up</button>
+          <button mat-button (click)="fs.login()">Google</button>
+          <button mat-button (click)="fs.login()">Facebook</button>
+          <button mat-button (click)="fs.login()">Apple</button>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="register">
+        <form #f="ngForm" (ngSubmit)="emailRegister(f)" class="example-form">
+          <h2>Sign Up</h2>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input name="email" ngModel matInput>
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input name="pword" ngModel matInput>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Password is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <div class="formButtonContainer">
+            <button class="example-full-width" mat-button>Submit</button>
+          </div>
+        </form>
+        <hr>
+        <div class="formButtonContainer">
+          <button mat-button (click)="RegisterRegister()">Login</button>
+          <button mat-button (click)="fs.login()">Google</button>
+          <button mat-button (click)="fs.login()">Facebook</button>
+          <button mat-button (click)="fs.login()">Apple</button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+

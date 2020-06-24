@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import '~@angular/material/prebuilt-themes/deeppurple-amberscss'; */
+ @import 'assets/CustomStyles/MyAngularTheme.css'; 
+html, body { height: 100%; }
+ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,body,#app {
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+#app{
+    z-index: 10000;
+}
+.videoContainer .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    background:  rgba(0,0,0,0.6);
+    opacity: 0.5;
+} 
+
+#videoBG {
+    position:fixed;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #videoBG { 
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width: 767px) {
+    #videoBG {
+        display: none;
+    }
+    body {
+        /* background: url('./assets/img/d2purp.jpg'); */
+        background-size: cover;
+    }
+
+
+} 
+
+/* .videoContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    //padding: 20px;
+    border-radius: 5px;
+    background-attachment: scroll;
+    overflow: hidden;
+}
+.videoContainer video {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    z-index: 1;
+}
+*/

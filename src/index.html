@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BookingTool</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+</head>
+
+<body>
+  <div class="videoContainer">
+    <div class="overlay"></div>
+    <video id="videoBG" poster="" autoplay muted loop>
+      <source id="ss" src="assets/Vids/v2.mp4" type="video/mp4">
+    </video>
+    <!-- <video id="myVideo" height="400" width="400" autoplay onended="run();">   
+      <source id="ss"  src="video/video1.mp4" type='video/mp4'>
+  </video>-->
+
+  <script>
+     
+
+let run = function () {
+
+  let video_count = 0;
+  let videoVideoSlideTimer = setInterval(function () {
+
+    video_count ++;
+    const videoPlayer = document.getElementById("videoBG");
+    videoPlayer.setAttribute("src", `assets/Vids/v${video_count}.mp4`);
+    
+ console.log(video_count)
+    if (video_count === 3) {
+     video_count = 0;
+     
+    }
+  },7000);
+};
+run();
+
+  </script> 
+
+  </div>
+  <div id="app">
+    <app-root></app-root>
+  </div>
+</body>
+
+</html>
